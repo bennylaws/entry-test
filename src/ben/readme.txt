@@ -19,8 +19,9 @@ beinhaltet lediglich genau ein Objekt, nämlich den Root-Knoten vom Typ [Node].
 ist die "wichtigste Klasse". Hier werden alle Daten gespeichert.
 Momentan beinhaltet [Node] als Daten nur einen int-Wert namens data. Später wäre das aber ein Feld (Spielfeld).
 Außerdem könnten später noch weitere Daten dazu kommen (sind auskommentiert) zb. Alpha, Beta, ... irgendwas halt.
-[Node] besitzt zusätzlich Methoden um seinem eigenen ArrayList<Node> "children" wieder neue Knoten (Nodes) hinzuzufügen, zu löschen, und den Baum auszugeben.
-Der Methode traverse() (die momentan einfach den Knoten, den Parent-Knoten und die Anzahl seiner Kinder ausgibt),
+[Node] besitzt zusätzlich Methoden um seinem eigenen ArrayList<Node> "children" wieder neue Knoten (Nodes)
+hinzuzufügen, zu löschen, und den Baum auszugeben.
+Die Methode traverse() (die momentan einfach den Knoten, den Parent-Knoten und die Anzahl seiner Kinder ausgibt),
 muss aus irgendeinem Knoten heraus gerufen werden. Logischerweise für den kompletten Baum dann von TreeStruct.Node aus,
 siehe main-Funktion ( ts.root.traverse(); )
 
@@ -35,22 +36,22 @@ wieder 3 Kinder... siehe Kommentierung im Quelltext... dann wird mit ts.root.tra
 
 [IN-ORDER-TRAVERSIERUNG] = erst aktuelles Element ausgeben, dann zum kind; ausgeben; zu dessen Kind, ausgeben; ... usw. (rekursiv)
 
-		 * ***************************************************************************************
-		 * Reihenfolge hier: *0*, *1*, 4, 5, 6, *2*, 7, 8, 9, *3*, 10, 11, 12
-		 * ***************************************************************************************
-		 * 
-		 * 										root(0)
-		 * 
-		 * 				Kind(1)					Kind(2)						Kind(3)
-		 * 
-		 * 	Kind(4) Kind(5) Kind(6) 	Kind(7) Kind(8) Kind(9)		Kind(10) Kind(11) Kind(12)
-		 * 
-		 * ****************************************************************************************
-		 * 
-		 * die traverse() Fu. gibt nur jeweils data (Momentan also der Name) des aktuellen Knotens,
-		 * den Namen seines Eltern-Knotens und die Anzahl seiner eigenen Kinder aus.
-		 * 
-		 */
+***************************************************************************************
+Reihenfolge hier: *0*, *1*, 4, 5, 6, *2*, 7, 8, 9, *3*, 10, 11, 12
+***************************************************************************************
+ 
+                                 root(0)
+
+ 		Kind(1)                  Kind(2)                     Kind(3)
+
+Kind(4) Kind(5) Kind(6)   Kind(7) Kind(8) Kind(9)   Kind(10) Kind(11) Kind(12)
+ 
+****************************************************************************************
+ 
+die traverse() Fu. gibt nur jeweils data (Momentan also der Name) des aktuellen Knotens,
+den Namen seines Eltern-Knotens und die Anzahl seiner eigenen Kinder aus.
+ 
+
 
 
 
